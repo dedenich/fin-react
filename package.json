@@ -1,0 +1,28 @@
+{
+  "name": "fin-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-htmlacademy": "^0.5.2",
+    "eslint": "^7.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "babel-loader": "8.1.0",
+    "eslint-plugin-react": "7.20.5",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "scripts": {
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "test": "npm run eslint",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
