@@ -141,5 +141,10 @@ Array [
       </ul>
     </div>
   </div>,
+  <button
+    className="add_button"
+    onClick={[Function]}
+    type="button"
+  />,
 ]
 `;

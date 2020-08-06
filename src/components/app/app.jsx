@@ -3,6 +3,7 @@ import React, {Fragment} from 'react';
 
 import Aim from '../aim/aim.jsx';
 import Card from '../card/card.jsx';
+import AddButton from '../add-button/add-button.jsx';
 
 import {CardCaptures} from '../../const.js';
 import mockAim from '../../mocks/aim-mock.js';
@@ -20,6 +21,7 @@ const App = () => <Fragment>
   <Card
     capture={CardCaptures.RESULT}
   />
+  <AddButton/>
 </Fragment>;
 
 export default App;
