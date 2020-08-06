@@ -3,6 +3,12 @@ const CardCaptures = {
   RESULT: `Результат`,
 };
 
+const ResultCaptures = {
+  COLLECTED: `Собрано`,
+  LEFT: `Осталось`,
+};
+
 export {
   CardCaptures,
+  ResultCaptures,
 };

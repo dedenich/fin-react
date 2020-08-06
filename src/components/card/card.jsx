@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import CardList from '../card-list/card-list.jsx';
+
 import {CardCaptures} from '../../const.js';
 
 const Card = (props) => {
@@ -9,7 +11,9 @@ const Card = (props) => {
     <div className="card-wrapper">
       <p className="capture">{capture}:</p>
       <div className="card">
-
+        <CardList
+          idAdmissionsCard={capture === CardCaptures.ADMISSIONS}
+        />
       </div>
     </div>);
 };
