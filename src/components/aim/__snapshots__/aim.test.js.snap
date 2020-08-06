@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders correctly 1`] = `
+exports[`Aim renders correctly 1`] = `
 <div
   className="card aim-container"
   data-state="not empty"
@@ -11,7 +11,7 @@ exports[`App renders correctly 1`] = `
       className="aim-container__curr-cont"
     >
       <h2>
-        12.10
+        1212.00
       </h2>
       <div
         className="aim-container__cur-controls"
@@ -26,7 +26,7 @@ exports[`App renders correctly 1`] = `
     <div
       className="aim-container__aim-descr"
     >
-      Билет в Витебск
+      Билет в Зеленоград
     </div>
   </div>
 </div>

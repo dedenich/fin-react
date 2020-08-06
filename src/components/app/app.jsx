@@ -3,9 +3,9 @@ import React, {Fragment} from 'react';
 
 import Aim from '../aim/aim.jsx';
 
-import MockAim from '../../mocks/aim-mock.js';
+import mockAim from '../../mocks/aim-mock.js';
 
-const {amount, description} = MockAim;
+const {amount, description} = mockAim;
 
 const App = () => <Fragment>
   <Aim
