@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 // import PropTypes from 'prop-types';
 
-const App = () => <div className="wrapper">
-  Мы в App
-</div>;
+import Aim from '../aim/aim.jsx';
+
+import MockAim from '../../mocks/aim-mock.js';
+
+const {amount, description} = MockAim;
+
+const App = () => <Fragment>
+  <Aim
+    amount = {amount}
+    description = {description}
+  />
+</Fragment>;
 
 export default App;
