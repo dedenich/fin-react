@@ -81,13 +81,13 @@ html {
   color: #919191;
 }
 
-.spendings-capture {
+.card-wrapper>.capture {
   font-family: 'Noto Sans Jp', sans-serif;
   color: #424242;
   margin-bottom: 3px;
 }
 
-.spendings-list {
+.card-list {
   width: 280px;
   height: max-content;
   margin: 0 auto;
@@ -96,7 +96,7 @@ html {
   flex-direction: column-reverse;
 }
 
-.spendings-list li {
+.card-list li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,31 +104,31 @@ html {
   height: 30px;
 }
 
-.spendings-list li div {
+.card-list li div {
   line-height: 30px;
 }
 
-.spendings-list__ind.increase circle {
+.card-list__ind.increase circle {
   fill: #50c777;
 }
 
-.spendings-list__ind.decrease circle {
+.card-list__ind.decrease circle {
   fill: #f5625d;
 }
 
-.spendings-list__summa {
+.card-list__summa {
   font-weight: 700;
   transition: ease 0.1s;
 }
 
-.spendings-list__summa.time {
+.card-list__summa.time {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
   transition: ease 0.1s;
 }
 
-.spendings-list__comment {
+.card-list__comment {
   max-width: 120px;
   white-space: nowrap;
   overflow: hidden;
@@ -316,11 +316,11 @@ input:checked + .slider:before {
     flex-wrap: wrap;
   }
 
-  .resp-wrapper {
+  .card-wrapper {
     width: 47%;
   }
 
-  .resp-wrapper .card {
+  .card-wrapper .card {
     width: 100%;
   }
 
@@ -332,7 +332,7 @@ input:checked + .slider:before {
     margin: 20% auto;
   }
 
-  ul.spendings-list {
+  ul.card-list {
     width: 90%;
   }
 

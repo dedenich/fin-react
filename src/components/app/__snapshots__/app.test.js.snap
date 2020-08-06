@@ -1,33 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders correctly 1`] = `
-<div
-  className="card aim-container"
-  data-state="not empty"
-  id="aim"
->
-  <div>
-    <div
-      className="aim-container__curr-cont"
-    >
-      <h2>
-        12.10
-      </h2>
+Array [
+  <div
+    className="card aim-container"
+    data-state="not empty"
+    id="aim"
+  >
+    <div>
       <div
-        className="aim-container__cur-controls"
+        className="aim-container__curr-cont"
       >
+        <h2>
+          12.10
+        </h2>
         <div
-          className="aim-container__controls_cur"
+          className="aim-container__cur-controls"
         >
-          BYN
+          <div
+            className="aim-container__controls_cur"
+          >
+            BYN
+          </div>
         </div>
       </div>
+      <div
+        className="aim-container__aim-descr"
+      >
+        Билет в Витебск
+      </div>
     </div>
-    <div
-      className="aim-container__aim-descr"
+  </div>,
+  <div
+    className="card-wrapper"
+  >
+    <p
+      className="capture"
     >
-      Билет в Витебск
-    </div>
-  </div>
-</div>
+      Поступления
+      :
+    </p>
+    <div
+      className="card"
+    />
+  </div>,
+  <div
+    className="card-wrapper"
+  >
+    <p
+      className="capture"
+    >
+      Результат
+      :
+    </p>
+    <div
+      className="card"
+    />
+  </div>,
+]
 `;
