@@ -1,5 +1,8 @@
 import React, {PureComponent} from "react";
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+
+import {ActionCreator, Operation} from '../../reducer.js';
 
 const withForm = (Component) => {
   class WithForm extends PureComponent {
@@ -19,20 +22,29 @@ const withForm = (Component) => {
     handleAimSumbit(evt) {
       evt.preventDefault();
 
-      // const {onAimAdd} = this.props;
-      // const {comment, amount} = this.state;
-
-      const {onCloseButtonClick} = this.props;
+      const {onAddAim, onCloseButtonClick} = this.props;
+      const {comment, amount} = this.state;
+      onAddAim({
+        description: comment,
+        amount,
+      });
       onCloseButtonClick();
     }
 
     handleAdmissionSumbit(evt) {
       evt.preventDefault();
 
-      // const {onAdmissionAdd} = this.props;
-      // const {comment, amount, isFunding} = this.state;
+      const {onAddAdmission, onCloseButtonClick} = this.props;
+      const {comment, amount, isFunding} = this.state;
 
-      const {onCloseButtonClick} = this.props;
+      const date = new Date();
+
+      onAddAdmission({
+        date: `${date.getDate()}.${date.getMonth() + 1}<br/>${date.getHours()}:${date.getMinutes()}`,
+        comment,
+        amount,
+        isFunding,
+      });
       onCloseButtonClick();
     }
 
@@ -67,12 +79,23 @@ const withForm = (Component) => {
   }
 
   WithForm.propTypes = {
-    onLogin: PropTypes.func,
+    onAddAim: PropTypes.func,
+    onAddAdmission: PropTypes.func,
     isAimAdded: PropTypes.bool.isRequired,
     onCloseButtonClick: PropTypes.func.isRequired,
   };
 
-  return WithForm;
+  const mapDispatchToProps = (dispatch) => ({
+    onAddAdmission(admission) {
+      dispatch(ActionCreator.addAdmission(admission));
+    },
+    onAddAim(aim) {
+      dispatch(ActionCreator.addAim(aim));
+      dispatch(Operation.changeAimStatus());
+    },
+  });
+
+  return connect(null, mapDispatchToProps)(WithForm);
 };
 
 export default withForm;

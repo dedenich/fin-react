@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 
 import CardList from '../card-list/card-list.jsx';
 
@@ -12,7 +13,7 @@ const Card = (props) => {
       <p className="capture">{capture}:</p>
       <div className="card">
         <CardList
-          idAdmissionsCard={capture === CardCaptures.ADMISSIONS}
+          isAdmissionsCard={capture === CardCaptures.ADMISSIONS}
         />
       </div>
     </div>);
@@ -22,4 +23,8 @@ Card.propTypes = {
   capture: PropTypes.oneOf([CardCaptures.ADMISSIONS, CardCaptures.RESULT]).isRequired,
 };
 
-export default Card;
+const mapStateToProps = (state) => ({
+  collectedAmount: state.isAimAdded,
+});
+
+export default connect(mapStateToProps)(Card);

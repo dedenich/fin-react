@@ -9,7 +9,7 @@ it(`CardList renders correctly`, () => {
   const tree = renderer
   .create(
       <CardList
-        idAdmissionsCard={false}
+        isAdmissionsCard={false}
         result={mockResult}
       />
   )
