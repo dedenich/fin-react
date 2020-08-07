@@ -13,8 +13,11 @@ const FormHeadings = {
   ADD_AIM: `Добавление цели`,
 };
 
+const REDUX_STORE = `redux-store`;
+
 export {
   CardCaptures,
   ResultCaptures,
   FormHeadings,
+  REDUX_STORE
 };

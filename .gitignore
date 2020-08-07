@@ -7,7 +7,7 @@ Thumbs.db
 node_modules/
 
 public/bundle.js
-public/bundle.js.map.
+public/bundle.js.map
 
 # Вспопомагельные файлы разметки
 markup

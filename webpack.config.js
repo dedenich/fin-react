@@ -8,6 +8,7 @@ module.exports = {
     path: path.join(__dirname, `public`)
   },
   devServer: {
+    inline: false,
     contentBase: path.join(__dirname, `public`),
     open: false,
     port: 3000,
