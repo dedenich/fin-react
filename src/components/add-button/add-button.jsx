@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AddButton = () => {
-  // const {onAddButton} = props;
-  const onAddButton = () => {};
-  return <button type="button" className="add_button" onClick={onAddButton}/>;
+const AddButton = (props) => {
+  const {onAddButtonClick} = props;
+  return <button type="button" className="add_button" onClick={onAddButtonClick}/>;
 };
 
 AddButton.propTypes = {
-  onAddButton: PropTypes.func,
+  onAddButtonClick: PropTypes.func,
 };
 
 export default AddButton;

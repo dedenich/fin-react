@@ -8,7 +8,13 @@ const ResultCaptures = {
   LEFT: `Осталось`,
 };
 
+const FormHeadings = {
+  CHANGE_AMOUNT: `Изменение суммы`,
+  ADD_AIM: `Добавление цели`,
+};
+
 export {
   CardCaptures,
   ResultCaptures,
+  FormHeadings,
 };
