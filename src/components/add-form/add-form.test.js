@@ -1,17 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import withForm from "./with-form.jsx";
+import AddForm from "./add-form.jsx";
 
-const MockComponent = () => <div></div>;
-
-const MockComponentWrapped = withForm(MockComponent);
 
 it(`withForm is rendered correctly`, () => {
   const tree = renderer
   .create(
-      <MockComponentWrapped
+      <AddForm
         isAimAdded={false}
         onCloseButtonClick={jest.fn()}
+        onInputChange={jest.fn()}
+        onFormSubmit={jest.fn()}
       />
   ).toJSON();
 

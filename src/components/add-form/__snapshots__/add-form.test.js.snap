@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withForm is rendered correctly 1`] = `
+<div
+  className="form-bg"
+  id="form"
+>
+  <div
+    className="wrapper"
+  >
+    <button
+      className="close_button"
+      id="close_button"
+      onClick={[MockFunction]}
+    />
+    <div
+      className="card form"
+    >
+      <h3>
+        Добавление цели
+      </h3>
+      <form
+        action="#"
+        onSubmit={[MockFunction]}
+      >
+        <input
+          autoFocus={true}
+          name="amount"
+          onChange={[MockFunction]}
+          placeholder="Сумма"
+          step="0.01"
+          type="number"
+        />
+        <input
+          name="comment"
+          onChange={[MockFunction]}
+          placeholder="Комментарий"
+          type="text"
+        />
+        <button
+          className="form_submit"
+          type="submit"
+        >
+          Добавить!
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;
