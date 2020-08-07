@@ -6,7 +6,7 @@ html {
 }
 
 .wrapper {
-  padding-top: 40px;
+  padding: 40px 0 80px 0;
   width: 300px;
   margin: 0 auto;
 }
@@ -157,14 +157,37 @@ html {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
 }
 
 .card.form {
+  box-shadow: none;
   margin: 5vh auto 0 auto;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   height: max-content;
+  clip-path: polygon(43% 0, 50% 4.5%, 56.5% 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  animation: 0.12s linear 0s alternate appear-from-bottom;
+}
+
+@keyframes appear-from-bottom{
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 5vh;
+  }
+}
+
+@keyframes appear-from-top{
+  from {
+    top: calc(5vh + 10px);
+  }
+  to {
+    top: calc(5vh + 40px - 20px);
+  }
 }
 
 .form h3 {
@@ -266,19 +289,19 @@ input:checked + .slider:before {
 }
 
 .close_button {
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   position: relative;
-  bottom: 269px;
-  left:  286px;
-  background-image: url(./img/plus.svg); 
-  background-color: #fff;
-  border-radius: 50%;
-  transform: rotate(45deg);
-  box-shadow: 2px 2px 4px 1px #e9e9e9;
-  background-size: 20px;
+  left: calc(50% - 20px);
+  top: calc(5vh + 40px - 20px);
+  background: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.445 1.832l6.946 4.63a2 2 0 0 0 2.218 0l6.946-4.63a1 1 0 1 0-1.11-1.664L8.5 4.798 1.555.168a1 1 0 1 0-1.11 1.664z' fill='%23e3e3e3' fill-rule='nonzero'/%3E%3C/svg%3E");
+  border: none;
+  background-size: 34px;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 3;
+  animation: 0.12s ease-in 0.16s alternate appear-from-top;
 }
 
 #form-aim .close_button {
@@ -330,11 +353,16 @@ input:checked + .slider:before {
   }
   
   .card.form {
-    margin: 20% auto;
+    margin: 200px auto;
   }
 
   ul.card-list {
     width: 90%;
+  }
+
+  .close_button {
+    left: 50%;
+    top: 180px;
   }
 
 }
