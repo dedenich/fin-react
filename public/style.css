@@ -209,14 +209,19 @@ form input {
   background-color: #fafafa;
 }
 
-form input[type=submit] {
+form button[type=submit] {
+  display: block;
+  margin: 20px auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  outline: none;
+  border-radius: 8px;
+  background-color: #fafafa;
   border: none;
   height: 34px;
   margin-bottom: 0;
   width: 150px;
   background-color: #d0b7ff;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
 }
 
 .form__input_togler {

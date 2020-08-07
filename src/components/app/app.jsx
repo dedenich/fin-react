@@ -5,11 +5,14 @@ import Card from '../card/card.jsx';
 import AddButton from '../add-button/add-button.jsx';
 import AddForm from '../add-form/add-form.jsx';
 
+import withForm from '../../hocs/with-form/with-form.jsx';
+
 import {CardCaptures} from '../../const.js';
 import mockAim from '../../mocks/aim-mock.js';
 
 const {amount, description} = mockAim;
 
+const AddFromWrapped = withForm(AddForm);
 
 class App extends PureComponent {
   constructor(props) {
@@ -43,7 +46,7 @@ class App extends PureComponent {
           onAddButtonClick={this.handleFormShow}
         />
         {isFormShown &&
-        <AddForm
+        <AddFromWrapped
           onCloseButtonClick={this.handleFormShow}
           isAimAdded = {isAimAdded}
         />}
