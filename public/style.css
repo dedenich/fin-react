@@ -312,11 +312,13 @@ input:checked + .slider:before {
   height: 38px;
   top:  -8px;
   animation: none;
+  transform: none;
   animation: 0.12s ease-in 0s alternate rotate-back;
 }
 
 .card>.close_button.rotated {
   animation: 0.12s ease-in 0s alternate rotate;
+  transform: rotate(180deg);
 }
 
 @keyframes rotate{

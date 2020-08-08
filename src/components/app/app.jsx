@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import Aim from '../aim/aim.jsx';
-import {Card} from '../card/card.jsx';
+import Card from '../card/card.jsx';
 import AddButton from '../add-button/add-button.jsx';
 import AddForm from '../add-form/add-form.jsx';
 
