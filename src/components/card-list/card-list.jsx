@@ -14,7 +14,6 @@ class CardList extends PureComponent {
   render() {
     const {admissionsList, collectedAmount, collectedShare, onContentShow, isContentShown} = this.props;
     const {isAdmissionsCard} = this.props;
-    // const isContentShown = true;
     return (
       <Fragment>
         {isAdmissionsCard && <button className={`close_button ${!isContentShown ? `rotated` : ``}`} onClick={onContentShow}/>}

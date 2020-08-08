@@ -309,6 +309,35 @@ input:checked + .slider:before {
   animation: 0.12s ease-in 0.16s alternate appear-from-top;
 }
 
+.card>.close_button {
+  height: 38px;
+  top:  -8px;
+  animation: none;
+  animation: 0.12s ease-in 0s alternate rotate-back;
+}
+
+.card>.close_button.rotated {
+  animation: 0.12s ease-in 0s alternate rotate;
+}
+
+@keyframes rotate{
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotate-back{
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
 #form-aim .close_button {
   bottom: 215px;
 }
