@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 
 import CardList from '../card-list/card-list.jsx';
 import withDependentContent from '../../hocs/with-dependent-content/with-dependent-content.jsx';
@@ -26,8 +25,4 @@ Card.propTypes = {
   capture: PropTypes.oneOf([CardCaptures.ADMISSIONS, CardCaptures.RESULT]).isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  collectedAmount: state.isAimAdded,
-});
-
-export default connect(mapStateToProps)(Card);
+export default Card;
