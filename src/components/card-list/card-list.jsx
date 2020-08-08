@@ -12,12 +12,12 @@ class CardList extends PureComponent {
   }
 
   render() {
-    const {admissionsList, collectedAmount, collectedShare} = this.props;
+    const {admissionsList, collectedAmount, collectedShare, onContentShow, isContentShown} = this.props;
     const {isAdmissionsCard} = this.props;
-    const isContentShown = true;
+    // const isContentShown = true;
     return (
       <Fragment>
-        {isAdmissionsCard && <button className={`close_button ${!isContentShown ? `rotated` : ``}`}/>}
+        {isAdmissionsCard && <button className={`close_button ${!isContentShown ? `rotated` : ``}`} onClick={onContentShow}/>}
         <ul className="card-list">
           {isAdmissionsCard ?
             <AdmissionsList
@@ -40,10 +40,12 @@ class CardList extends PureComponent {
 
 CardList.propTypes = {
   isAdmissionsCard: PropTypes.bool.isRequired,
+  isContentShown: PropTypes.bool.isRequired,
   admissionsList: PropTypes.array,
   result: PropTypes.object,
   collectedAmount: PropTypes.number,
   collectedShare: PropTypes.number,
+  onContentShow: PropTypes.func
 };
 
 const mapStateToProps = (state) => ({
