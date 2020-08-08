@@ -40,7 +40,7 @@ const withForm = (Component) => {
       const date = new Date();
 
       onAddAdmission({
-        date: `${date.getDate()}.${date.getMonth() + 1}<br/>${date.getHours()}:${date.getMinutes()}`,
+        date: `${date.getDate()}.${date.getMonth() + 1} ${date.getHours()}:${date.getMinutes()}`,
         comment,
         amount,
         isFunding,

@@ -121,7 +121,7 @@ html {
   transition: ease 0.1s;
 }
 
-.card-list__summa.time {
+.card-list__summa>.time {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
@@ -305,7 +305,6 @@ input:checked + .slider:before {
   background-size: 34px;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 3;
   animation: 0.12s ease-in 0.16s alternate appear-from-top;
 }
 
