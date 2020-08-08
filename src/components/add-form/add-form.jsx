@@ -8,7 +8,7 @@ const AddForm = (props) => {
   return (
     <div className="form-bg" id="form">
       <div className="wrapper">
-        <button className="close_button" id="close_button" onClick={onCloseButtonClick}/>
+        <button className="close_button" onClick={onCloseButtonClick}/>
         <div className="card form">
           <h3>{isAimAdded ? FormHeadings.CHANGE_AMOUNT : FormHeadings.ADD_AIM}</h3>
           <form action="#" onSubmit={onFormSubmit}>
