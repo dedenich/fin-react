@@ -88,6 +88,9 @@ const withForm = (Component) => {
   const mapDispatchToProps = (dispatch) => ({
     onAddAdmission(admission) {
       dispatch(ActionCreator.addAdmission(admission));
+      dispatch(ActionCreator.updateCollectedAmount(admission));
+      dispatch(ActionCreator.updateRemainsAmount());
+      dispatch(ActionCreator.updateCollectedShare());
     },
     onAddAim(aim) {
       dispatch(ActionCreator.addAim(aim));

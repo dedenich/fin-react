@@ -11,7 +11,7 @@ const AdmissionsList = (props) => {
 
   const {isContentShown, collectedAmount, admissionsList} = props;
   return (
-    (!isContentShown && <li>{`Собрано`}: <span>{Number(collectedAmount).toFixed(2)} BYN</span></li>)
+    (!isContentShown && <li>{`Всего`}: <span>{Number(collectedAmount).toFixed(2)} BYN</span></li>)
   || admissionsList.map((it, i) => (
     <AdmissionsListItemWrapped
       key={it.comment + i}

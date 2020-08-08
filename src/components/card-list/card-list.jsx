@@ -12,7 +12,7 @@ class CardList extends PureComponent {
   }
 
   render() {
-    const {admissionsList, collectedAmount, collectedShare, onContentShow, isContentShown} = this.props;
+    const {admissionsList, collectedAmount, collectedShare, onContentShow, isContentShown, remains} = this.props;
     const {isAdmissionsCard} = this.props;
     return (
       <Fragment>
@@ -27,7 +27,7 @@ class CardList extends PureComponent {
             :
             <Fragment>
               <li>{ResultCaptures.COLLECTED}: <span>{Number(collectedShare).toFixed(2)}%</span></li>
-              <li>{ResultCaptures.LEFT}: <span>{Number(collectedAmount).toFixed(2)} BYN</span></li>
+              <li>{ResultCaptures.LEFT}: <span>{Number(remains).toFixed(2)} BYN</span></li>
             </Fragment>
           }
         </ul>
@@ -41,7 +41,7 @@ CardList.propTypes = {
   isAdmissionsCard: PropTypes.bool.isRequired,
   isContentShown: PropTypes.bool.isRequired,
   admissionsList: PropTypes.array,
-  result: PropTypes.object,
+  remains: PropTypes.number,
   collectedAmount: PropTypes.number,
   collectedShare: PropTypes.number,
   onContentShow: PropTypes.func
@@ -49,6 +49,7 @@ CardList.propTypes = {
 
 const mapStateToProps = (state) => ({
   admissionsList: state.admissions,
+  remains: state.remains,
   collectedShare: state.collectedShare,
   collectedAmount: state.collectedAmount,
 });

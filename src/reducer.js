@@ -1,9 +1,12 @@
-import {extend, pushAdmission} from './utils.js';
+import {extend, pushAdmission, getNewCollectedAmount, getNewRemainsAmount, getNewCollectedShare} from './utils.js';
 
 const ActionType = {
   ADD_AIM: `ADD_AIM`,
   ADD_ADMISSION: `ADD_ADMISSION`,
   CHANGE_AIM_STATUS: `CHANGE_AIM_STATUS`,
+  UPDATE_COLLECTED_SHARE: `UPDATE_COLLECTED_SHARE`,
+  UPDATE_COLLECTED_AMOUNT: `UPDATE_COLLECTED_AMOUNT`,
+  UPDATE_REMAINS_AMOUNT: `UPDATE_REMAINS_AMOUNT`,
 };
 
 const initialState = {
@@ -33,6 +36,21 @@ const ActionCreator = {
     type: ActionType.ADD_AIM,
     payload: aim,
   }),
+
+  updateCollectedAmount: (admission) => ({
+    type: ActionType.UPDATE_COLLECTED_AMOUNT,
+    payload: admission,
+  }),
+
+  updateCollectedShare: (admission) => ({
+    type: ActionType.UPDATE_COLLECTED_SHARE,
+    payload: admission,
+  }),
+
+  updateRemainsAmount: () => ({
+    type: ActionType.UPDATE_REMAINS_AMOUNT,
+    payload: null,
+  })
 };
 
 const Operation = {
@@ -54,6 +72,21 @@ const reducer = (state = initialState, action) => {
     case ActionType.ADD_AIM:
       return extend(state, {
         aim: action.payload,
+      });
+
+    case ActionType.UPDATE_COLLECTED_AMOUNT:
+      return extend(state, {
+        collectedAmount: getNewCollectedAmount(action.payload, state),
+      });
+
+    case ActionType.UPDATE_REMAINS_AMOUNT:
+      return extend(state, {
+        remains: getNewRemainsAmount(state),
+      });
+
+    case ActionType.UPDATE_COLLECTED_SHARE:
+      return extend(state, {
+        collectedShare: getNewCollectedShare(state),
       });
   }
   return state;
