@@ -9,9 +9,10 @@ it(`AdmissionsListItem is rendered correctly`, () => {
       <AdmissionsListItem
         isFunding={false}
         comment={`comment`}
-        amount={12.0}
+        amount={`12.0`}
         date={`12.09 12.23`}
         isContentShown={false}
+        onContentShow={jest.fn()}
       />
   ).toJSON();
 

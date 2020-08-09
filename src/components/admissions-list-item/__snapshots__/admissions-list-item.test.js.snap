@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdmissionsListItem is rendered correctly 1`] = `
-<li>
+<li
+  onClick={[MockFunction]}
+>
   <div
     className="card-list__ind"
   >

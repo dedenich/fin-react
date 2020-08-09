@@ -68,4 +68,5 @@ const mapStateToProps = (state) => ({
   aim: state.aim,
 });
 
+export {App};
 export default connect(mapStateToProps)(App);

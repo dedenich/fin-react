@@ -12,7 +12,7 @@ Array [
         className="aim-container__curr-cont"
       >
         <h2>
-          12.10
+          0.00
         </h2>
         <div
           className="aim-container__cur-controls"
@@ -27,7 +27,7 @@ Array [
       <div
         className="aim-container__aim-descr"
       >
-        Билет в Витебск
+        
       </div>
     </div>
   </div>,
@@ -43,68 +43,13 @@ Array [
     <div
       className="card"
     >
+      <button
+        className="close_button "
+        onClick={[Function]}
+      />
       <ul
         className="card-list"
-      >
-        <li>
-          <div
-            className="card-list__ind increase"
-          >
-            <svg
-              className="card-list__ind"
-              height="30"
-              width="30"
-            >
-              <circle
-                cx="15"
-                cy="15"
-                fill="#f5625d"
-                r="8"
-              />
-            </svg>
-          </div>
-          <div
-            className="card-list__comment"
-          >
-            пополнение
-          </div>
-          <div
-            className="card-list__summa"
-            data-time="6.8 11:45"
-          >
-            12
-          </div>
-        </li>
-        <li>
-          <div
-            className="card-list__ind"
-          >
-            <svg
-              className="card-list__ind"
-              height="30"
-              width="30"
-            >
-              <circle
-                cx="15"
-                cy="15"
-                fill="#f5625d"
-                r="8"
-              />
-            </svg>
-          </div>
-          <div
-            className="card-list__comment"
-          >
-            снятие
-          </div>
-          <div
-            className="card-list__summa"
-            data-time="6.8 11:45"
-          >
-            2
-          </div>
-        </li>
-      </ul>
+      />
     </div>
   </div>,
   <div
@@ -126,7 +71,7 @@ Array [
           Собрано
           : 
           <span>
-            35.00
+            0.00
             %
           </span>
         </li>
@@ -134,7 +79,7 @@ Array [
           Осталось
           : 
           <span>
-            12.00
+            0.00
              BYN
           </span>
         </li>
