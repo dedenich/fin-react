@@ -33,7 +33,7 @@ class App extends PureComponent {
     return (
       <Fragment>
         <Aim
-          amount = {amount}
+          amount = {Number(amount)}
           description = {description}
         />
         <Card
@@ -59,7 +59,7 @@ App.propTypes = {
   isAimAdded: PropTypes.bool.isRequired,
   aim: PropTypes.shape({
     description: PropTypes.string,
-    amount: PropTypes.number,
+    amount: PropTypes.string,
   }),
 };
 

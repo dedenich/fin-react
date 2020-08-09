@@ -10,7 +10,6 @@ exports[`withForm is rendered correctly 1`] = `
   >
     <button
       className="close_button"
-      id="close_button"
       onClick={[MockFunction]}
     />
     <div

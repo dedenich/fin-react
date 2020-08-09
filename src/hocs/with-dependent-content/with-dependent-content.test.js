@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import withDependentContent from "./with-form.jsx";
+import withDependentContent from "./with-dependent-content.jsx";
 
 const MockComponent = () => <div></div>;
 

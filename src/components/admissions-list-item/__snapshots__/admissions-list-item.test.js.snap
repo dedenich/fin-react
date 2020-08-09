@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdmissionsListItem is rendered correctly 1`] = `
+<li>
+  <div
+    className="card-list__ind"
+  >
+    <svg
+      className="card-list__ind"
+      height="30"
+      width="30"
+    >
+      <circle
+        cx="15"
+        cy="15"
+        fill="#f5625d"
+        r="8"
+      />
+    </svg>
+  </div>
+  <div
+    className="card-list__comment"
+  >
+    comment
+  </div>
+  <div
+    className="card-list__summa"
+  >
+    <span
+      className="time"
+    >
+      12.09 12.23
+    </span>
+  </div>
+</li>
+`;

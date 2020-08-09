@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdmissiomsList renders correctly 1`] = `
+<li>
+  Всего
+  : 
+  <span>
+    4.00
+     BYN
+  </span>
+</li>
+`;
