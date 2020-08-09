@@ -1,24 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardList renders correctly 1`] = `
-<ul
-  className="card-list"
->
-  <li>
-    Собрано
-    : 
-    <span>
-      35.00
-      %
-    </span>
-  </li>
-  <li>
-    Осталось
-    : 
-    <span>
-      12.00
-       BYN
-    </span>
-  </li>
-</ul>
+Array [
+  <button
+    className="close_button "
+  />,
+  <ul
+    className="card-list"
+  />,
+]
 `;

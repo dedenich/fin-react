@@ -1,17 +1,20 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import {Provider} from 'react-redux';
+
+import {store as mockStore} from '../../mocks/store-mock.js';
 
 import CardList from './card-list.jsx';
-
-import {mockResult} from '../../mocks/list-contents-mock.js';
 
 it(`CardList renders correctly`, () => {
   const tree = renderer
   .create(
-      <CardList
-        isAdmissionsCard={false}
-        result={mockResult}
-      />
+      <Provider store={mockStore}>
+        <CardList
+          isAdmissionsCard={true}
+          isContentShown={true}
+        />
+      </Provider>
   )
   .toJSON();
   expect(tree).toMatchSnapshot();
